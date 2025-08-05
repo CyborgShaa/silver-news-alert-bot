@@ -54,3 +54,11 @@ def fetch_rss_articles():
             })
 
     return results
+
+if __name__ == "__main__":
+    articles = fetch_rss_articles()
+    for a in articles:
+        print(f"📰 {a['title']}")
+        print(f"🔗 {a['link']}")
+        print(f"📅 {a['published']}")
+        print(f"📝 {a['summary'][:150]}...\n")
